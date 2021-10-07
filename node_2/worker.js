@@ -9,12 +9,14 @@ exports.getAllFood = function () {
 exports.getFoodFromID = function (id) {
 
     let food_target = foodList.data.find(food => {
-        return food.id === id;
+
+        return food.id == id;
     })
 
     return food_target;
 
 }
+
 
 exports.getSearchFood = function (keyword) {
 
@@ -50,3 +52,6 @@ exports.addFood = function (food_add) {
     }
 
 }
+
+
+exports

@@ -8,7 +8,9 @@
                 "หมู",
                 "ไก่",
                 "เนื้อ"
-            ]
+            ],
+            "price":35,
+            "img": "https://d12man5gwydfvl.cloudfront.net/wp-content/uploads/2019/03/%E0%B8%9C%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B0%E0%B9%80%E0%B8%9E%E0%B8%A3%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B8%AA%E0%B8%B1%E0%B8%9A-1.jpg"
         },
         {
             "id":1,
@@ -16,7 +18,9 @@
             "option":[
                 "ไม่ใส่ผัก",
                 "ไม่ใส่หัวหอม"
-            ]
+            ],
+            "price":30,
+            "img": "https://img.wongnai.com/p/1920x0/2019/12/19/d5537700a7274ac09964b6a51dd0a9f6.jpg"
         },
         {
             "id":2,
@@ -26,7 +30,9 @@
                 "หมูชิ้น",
                 "หมูสับ",
                 "ไก่"
-            ]
+            ],
+            "price":35,
+            "img":"https://food.mthai.com/app/uploads/2017/12/Stir-Fried-Kale-with-Crispy-Pork.jpg"
         },
         {
             "id":3,
@@ -36,7 +42,9 @@
                 "หมูชิ้น",
                 "หมูสับ",
                 "ไก่"
-            ]
+            ],
+            "price":30,
+            "img": "https://food.mthai.com/app/uploads/2019/05/Stir-Fried-Crispy-Pork-with-Red-Curry-17.jpg"
         },
         {
             "id":4,
@@ -46,7 +54,9 @@
                 "ไก่",
                 "ปลา",
                 "เนื้อ"
-            ]
+            ],
+            "price":70,
+            "img":"https://s.isanook.com/wo/0/rp/rc/w850h510/yacxacm1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3dvLzAvdWQvMTYvODI2ODUvODI2ODUtdGh1bWJuYWlsLmpwZw==.jpg"
         },
         {
             "id":5,
@@ -55,7 +65,9 @@
                 "เย็น",
                 "ร้อน",
                 "ปั่น"
-            ]
+            ],
+            "price":40,
+            "img": "https://www.gourmetandcuisine.com/Images/editor_upload/_editor20210712013308_original.jpg"
         },
         {
             "id":6,
@@ -64,7 +76,9 @@
                 "เย็น",
                 "ร้อน",
                 "ปั่น"
-            ]
+            ],
+            "price":40,
+            "img": "https://s.isanook.com/he/0/ud/4/23241/white-tea.jpg"
         },
         {
             "id":7,
@@ -73,7 +87,9 @@
                 "เย็น",
                 "ร้อน",
                 "ปั่น"
-            ]
+            ],
+            "price":40,
+            "img":"https://secure.ap-tescoassets.com/assets/TH/000/8850086139000/ShotType1_540x540.jpg"
         }
     ]
     
