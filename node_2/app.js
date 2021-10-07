@@ -1,2 +1,6 @@
-const foodList = require('./data/foodList.json')
+const express = require('express');
+const worker = require('./worker');
+
+const app = express();
+
 
