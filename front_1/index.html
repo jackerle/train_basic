@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        ทดสอบ HTML
+    </title>
+    <style>
+        .header{
+            background-color: pink;
+            padding: 10px;
+            text-align: center;
+        }
+        .line-end{
+            background-color: red;
+            height: 50px;
+        }
+        .category-text{
+            background-color: aqua;
+        }
+    </style>
+    <script>
+
+        fetch('http://localhost:8080/getAll').then(res=>{return res.json()}).then(data=>{
+            console.log(data)
+
+            let food_list = data
+            let food_list_element = ""
+
+            for(let food of food_list){
+                let food_ele = `<li>${food.food_name}</li>`
+                food_list_element += food_ele;
+            }
+
+            document.getElementById('list-food').innerHTML = food_list_element
+
+        })
+
+        function toggleForm(){
+
+            let isFormShow = document.getElementById('addFood').style.display == "none";
+            console.log(isFormShow);
+            if(isFormShow)document.getElementById('addFood').style.display = "block"
+            else document.getElementById('addFood').style.display = "none"
+        }
+
+        function addFood(event){
+
+            event.preventDefault()
+
+            let food_name = document.getElementById('food_name').value;
+            let option = document.getElementById('option').value;
+            let price = document.getElementById('price').value;
+            let img = document.getElementById('img').value;
+
+            let request = {
+                "food_name": food_name,
+                "option":[option],
+                "price":price,
+                "img":img
+            }
+
+            console.log(request);
+
+            fetch('http://localhost:8080/addFood',{
+                method:'POST',
+                headers:{
+                    'Content-type':'application/json'
+                },
+                body: JSON.stringify(request)
+            }).then(res=>res.text()).then(data=>{
+                console.log(data);
+                alert(data)
+                window.location.reload()
+            })
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h2>ร้านอาหารของ jackerle</h2>
+    </div>
+
+    <div class="line-end"></div>
+
+    <div class="content">
+
+        <div class="category-text">
+            <h3 style="text-align: center;">
+                เมนูร้านอาหาร
+            </h3>
+        </div>
+        <div class="category-content">
+            <h4>
+                อาหาร
+            </h4>
+            <div id="list-food">
+
+            </div>
+            <br/>
+            <button onclick="toggleForm()">เพิ่มอาหาร</button>
+        </div>
+        <br/>
+        <form id="addFood" onsubmit="addFood(event)">
+            <input type="text" placeholder="ชื่ออาหาร" id="food_name"/>
+            <br/>
+            <br/>
+            <input type="text" placeholder="option" id="option"/>
+            <br/>
+            <br/>
+            <input type="text" placeholder="ราคา" id="price"/>
+            <br/>
+            <br/>
+            <input type="text" placeholder="รูปภาพ" id="img"/>
+            <br/>
+            <br/>
+            <button type="submit" >
+                ยืนยัน
+            </button>
+        </form>
+
+    </div>
+
+</body>
+</html>

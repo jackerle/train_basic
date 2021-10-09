@@ -1,8 +1,7 @@
 const express = require('express');
 const worker = require('./worker');
-
 const app = express();
-
+const path = require('path');
 app.use(express.urlencoded());
 app.use(express.json());
 
@@ -40,6 +39,9 @@ app.get('/getFoodSearch',(req,res)=>{
 
 });
 
+app.get('/home',(req,res)=>{
+    res.sendFile(path.join(__dirname, '/index.html'));
+})
 
 
 app.listen(8080,()=>{
